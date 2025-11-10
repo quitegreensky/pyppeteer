@@ -79,6 +79,7 @@ class Launcher(object):
 
         ignoreDefaultArgs = options.get('ignoreDefaultArgs', False)
         args: List[str] = options.get('args', list())
+        args.append('--ignore-certificate-errors')
         self.dumpio = options.get('dumpio', False)
         executablePath = options.get('executablePath')
         self.env = options.get('env')
